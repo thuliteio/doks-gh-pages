@@ -51,6 +51,16 @@ h6,
   font-size: calc(1.875rem + 1.5vw);
 }
 
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a.btn:hover,
+a.btn:focus {
+  text-decoration: none;
+}
+
 .section {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -168,13 +178,18 @@ body {
   }
 }
 
+.navbar a:hover,
+.navbar a:focus {
+  text-decoration: none;
+}
+
 #TableOfContents ul {
   padding-left: 0;
   list-style: none;
 }
 
 ::selection {
-  background: lighten($primary, 55%);
+  background: rgba(212, 53, 159, 0.2);
 }
 
 .bg-dots {
@@ -207,4 +222,8 @@ body {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+.katex {
+  font-size: $font-size-md;
 }

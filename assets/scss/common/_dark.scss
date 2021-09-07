@@ -11,7 +11,6 @@ $dots-dark: darken($body-color-dark, 50%);
 $link-color-dark: $blue-300;
 $button-color-dark: $link-color-dark;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
-$selection-color-dark: lighten($link-color-dark, 2.5%);
 
 $navbar-dark-color:                 $body-color-dark;
 $navbar-dark-hover-color:           $link-color-dark;
@@ -36,6 +35,16 @@ body.dark .btn-primary {
   @include button-variant($button-color-dark, $button-color-dark);
 
   color: $body-bg-dark !important;
+}
+
+body.dark .btn-outline-primary {
+  @include button-outline-variant($button-color-dark, $button-color-dark);
+
+  color: $link-color-dark;
+}
+
+body.dark .btn-outline-primary:hover {
+  color: $body-bg-dark;
 }
 
 body.dark .navbar {
@@ -89,6 +98,10 @@ body.dark .page-links a {
   color: $body-color-dark;
 }
 
+body.dark .btn-toggle-nav a {
+  color: $body-color-dark;
+}
+
 body.dark .showcase-meta a {
   color: $body-color-dark;
 }
@@ -102,6 +115,43 @@ body.dark .docs-link:hover,
 body.dark .docs-link.active,
 body.dark .page-links a:hover {
   text-decoration: none;
+  color: $link-color-dark;
+}
+
+body.dark .btn-toggle {
+  color: $body-color-dark;
+  background-color: transparent;
+  border: 0;
+}
+
+body.dark .btn-toggle:hover,
+body.dark .btn-toggle:focus {
+  color: $body-color-dark;
+}
+
+body.dark .btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28222, 226, 230, 0.75%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+  margin-bottom: 0.125rem;
+}
+
+body.dark .btn-toggle[aria-expanded="true"] {
+  color: $body-color-dark;
+}
+
+body.dark .btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+body.dark .btn-toggle-nav a:hover,
+body.dark .btn-toggle-nav a:focus {
+  color: $link-color-dark;
+}
+
+body.dark .btn-toggle-nav a.active {
   color: $link-color-dark;
 }
 
@@ -151,8 +201,12 @@ body.dark .form-control.is-search {
 }
 
 body.dark .navbar-form::after {
-  color: $gray-700;
-  border: 1px solid $body-bg-dark;
+  color: $gray-600;
+  border: 1px solid $gray-800;
+}
+
+body.dark .form-control {
+  color: $gray-500;
 }
 
 body.dark .form-control:focus {
@@ -174,18 +228,27 @@ body.dark .docs-navigation {
   border-top: 1px solid $border-dark;
 }
 
-body.dark ::selection {
-  background: $selection-color-dark;
+body.dark pre code::-webkit-scrollbar-thumb {
+  background: $gray-400;
 }
 
-body.dark pre {
+body.dark pre code:hover {
+  scrollbar-width: thin;
+  scrollbar-color: $border-dark transparent;
+}
+
+body.dark pre code::-webkit-scrollbar-thumb:hover {
+  background: $gray-500;
+}
+
+body.dark code:not(.hljs):not(.language-mermaid) {
   background: $body-overlay-dark;
   color: $body-color-dark;
 }
 
-body.dark code {
-  background: $body-overlay-dark;
-  color: $body-color-dark;
+body.dark .mermaid,
+body.dark pre code.language-mermaid {
+  background: $white;
 }
 
 body.dark blockquote {
@@ -290,4 +353,27 @@ body.dark .alert-primary {
 
 body.dark .figure-caption {
   color: $body-color-dark;
+}
+
+body.dark table {
+  @extend .table-dark;
+}
+
+body.dark .copy-status::after {
+  content: "Copy";
+  display: block;
+  color: $body-color-dark;
+}
+
+body.dark .copy-status:hover::after {
+  content: "Copy";
+  display: block;
+  color: $link-color-dark;
+}
+
+body.dark .copy-status:focus::after,
+body.dark .copy-status:active::after {
+  content: "Copied";
+  display: block;
+  color: $link-color-dark;
 }

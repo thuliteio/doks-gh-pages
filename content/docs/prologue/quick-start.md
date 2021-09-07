@@ -15,7 +15,9 @@ toc: true
 
 ## Requirements
 
-Doks uses npm to install dependencies and run commands. Installing npm is pretty simple. Download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform.
+Doks uses npm to centralize dependency management, making it [easy to update]({{< relref "how-to-update" >}}) resources, build tooling, plugins, and build scripts:
+
+- Download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform.
 
 ## Start a new Doks project
 
@@ -23,7 +25,20 @@ Create a new site, change directories, install dependencies, and start developme
 
 ### Create a new site
 
-{{< btn-copy text="git clone https://github.com/h-enk/doks.git my-doks-site" >}}
+Doks is available as a child theme, and a starter theme:
+
+- Use the Doks child theme, if you do __not__ plan to customize a lot, and/or need future Doks updates.
+- Use the Doks starter theme, if you plan to customize a lot, and/or do __not__ need future Doks updates.
+
+Not quite sure? Use the Doks child theme.
+
+#### Doks child theme
+
+```bash
+git clone https://github.com/h-enk/doks-child-theme.git my-doks-site
+```
+
+#### Doks starter theme
 
 ```bash
 git clone https://github.com/h-enk/doks.git my-doks-site
@@ -31,23 +46,17 @@ git clone https://github.com/h-enk/doks.git my-doks-site
 
 ### Change directories
 
-{{< btn-copy text="cd my-doks-site" >}}
-
 ```bash
 cd my-doks-site
 ```
 
 ### Install dependencies
 
-{{< btn-copy text="npm install" >}}
-
 ```bash
 npm install
 ```
 
 ### Start development server
-
-{{< btn-copy text="npm run start" >}}
 
 ```bash
 npm run start
@@ -57,4 +66,4 @@ Doks will start the Hugo development webserver accessible by default at `http://
 
 ## Other commands
 
-Doks comes with commands for common tasks. [Commands →]({{< ref "commands" >}})
+Doks comes with commands for common tasks. [Commands →]({{< relref "commands" >}})

@@ -16,15 +16,16 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Check for linting errors
         run: npm test
@@ -41,9 +42,10 @@ jobs:
 
 2. Click on the __Actions__ tab of your GitHub repo and wait for the action to finish succesfully (after approximately 30 seconds).
 
-3. Go to the __Sections__ tab of your GitHub repo and scroll down to the __GitHub Pages__ section. Select branche `gh-pages` and click __Save__.
+3. Go to the __Sections__ tab of your GitHub repo, and next to the __Pages__ section. Select branche `gh-pages` and click __Save__.
 4. Copy the __Your site is published at__ URL and paste it as `baseurl` in `./config/production/config.toml`.
-5. Push the changes to GitHub and wait for the action to finish succesfully (after approximately 30 seconds).
-6. That's it. After a minute or so, you site is avaliable at the __Your site is published at__ URL.
+5. Set `canonifyURLs = true` in `./config/production/config.toml`.
+6. Push the changes to GitHub and wait for the action to finish succesfully (after approximately 30 seconds).
+7. That's it. After a minute or so, you site is avaliable at the __Your site is published at__ URL.
 
 Now, after every push to the master branch, your site will be updated — automatically.

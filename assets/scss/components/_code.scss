@@ -7,37 +7,60 @@ samp {
   border-radius: $border-radius;
 }
 
-pre {
-  background: $beige;
-  color: $black;
-  line-height: $line-height-lg;
-  margin: 2rem 0;
-  overflow: auto;
-  padding: 1.25rem 1.5rem;
-  tab-size: 4;
-}
-
 code {
   background: $beige;
   color: $black;
   padding: 0.25rem 0.5rem;
 }
 
-pre code {
-  background: none;
-  font-size: inherit;
-  padding: 0;
+pre {
+  margin: 2rem 0;
 }
 
-@include media-breakpoint-down(xs) {
-  pre {
-    margin: 2rem -1.5rem;
-  }
+pre code {
+  display: block;
+  overflow-x: auto;
+  line-height: $line-height-base;
+  padding: 1.25rem 1.5rem;
+  tab-size: 4;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
 
+.hljs {
+  padding: 1.25rem 1.5rem;
+}
+
+@include media-breakpoint-down(sm) {
   pre,
   code,
   kbd,
   samp {
     border-radius: 0;
   }
+
+  pre {
+    margin: 2rem -1.5rem;
+  }
+}
+
+pre code::-webkit-scrollbar {
+  height: 5px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  background: $gray-400;
+}
+
+pre code:hover {
+  scrollbar-width: thin;
+  scrollbar-color: $gray-500 transparent;
+}
+
+pre code::-webkit-scrollbar-thumb:hover {
+  background: $gray-500;
+}
+
+code.language-mermaid {
+  background: none;
 }
