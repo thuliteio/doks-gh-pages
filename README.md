@@ -42,7 +42,7 @@ jobs:
 
 2. Click on the __Actions__ tab of your GitHub repo and wait for the action to finish succesfully (after approximately 30 seconds).
 
-3. Go to the __Sections__ tab of your GitHub repo, and next to the __Pages__ section. Select branche `gh-pages` and click __Save__.
+3. Go to the __Settings__ tab of your GitHub repo, and next to the __Pages__ section. Select branche `gh-pages` and click __Save__.
 4. Copy the __Your site is published at__ URL and paste it as `baseurl` in `./config/production/config.toml`.
 5. Set `canonifyURLs = true` in `./config/production/config.toml`.
 6. Push the changes to GitHub and wait for the action to finish succesfully (after approximately 30 seconds).
