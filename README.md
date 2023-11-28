@@ -12,7 +12,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -43,12 +43,12 @@ jobs:
 
 3. Go to the __Settings__ tab of your GitHub repo, and next to the __Pages__ section. Select branch `gh-pages` and click __Save__.
 
-4. Copy the __Your site is published at__ URL and paste it as `baseurl` in `./config/production/config.toml`.
+4. Copy the __Your site is published at__ URL and paste it as `baseurl` in `./config/production/hugo.toml`.
 
-5. Set `canonifyURLs = true` in `./config/production/config.toml`.
+5. Set `canonifyURLs = true` in `./config/production/hugo.toml`.
 
 6. Push the changes to GitHub and wait for the action to finish succesfully (after approximately 30 seconds).
 
 7. That's it. After a minute or so, you site is avaliable at the __Your site is published at__ URL.
 
-Now, after every push to the master branch, your site will be updated — automatically.
+Now, after every push to the main branch, your site will be updated — automatically.
