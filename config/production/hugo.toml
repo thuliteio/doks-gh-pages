@@ -1,3 +1,2 @@
 # Overrides for production environment
 baseurl = "https://h-enk.github.io/doks-gh-pages/"
-canonifyURLs = true
