@@ -42,7 +42,7 @@ Follow the instructions below to deploy your Doks (or Hyas) site to GitHub pages
 
 2. On GitHub, go to your repository's **Settings** tab and find the **Pages** section of the settings.
 
-3. Choose **GitHub Actions** as the **Source** of your site.
+3. Choose **Deploy from a branch** as the **Source** of your site.
 
 4. Commit the new workflow file and push it to GitHub.
 
