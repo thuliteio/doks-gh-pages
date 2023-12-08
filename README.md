@@ -1,8 +1,8 @@
 # Deploy Doks to GitHub Pages
 
-Example repo showing how to publish your Doks (or Hyas) site to GitHub Pages by using [GitHub Actions](https://github.com/features/actions) to automatically build and deploy your site.
+Example repo showing how to publish your Doks site to GitHub Pages by using [GitHub Actions](https://github.com/features/actions) to automatically build and deploy your site.
 
-Follow the instructions below to deploy your Hyas site to GitHub pages:
+Follow the instructions below to deploy your Doks (or Hyas) site to GitHub pages.
 
 1. Create a new file in your project at `.github/workflows/deploy.yml` and paste in the YAML below.
 
