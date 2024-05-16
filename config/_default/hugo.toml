@@ -1,6 +1,6 @@
 title = "My Docs"
 baseurl = "http://localhost:1313/doks-gh-pages/"
-canonifyURLs = true
+canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 # disableKinds = ["taxonomy", "term"]
