@@ -1,5 +1,5 @@
-# Sample workflow for building and deploying a Hyas site to GitHub Pages
-name: Deploy Hyas site to Pages
+# Sample workflow for building and deploying a Thulite site to GitHub Pages
+name: Deploy Thulite site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -32,7 +32,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.126.0
+      HUGO_VERSION: 0.131.0
     steps:
       - name: Install Hugo CLI
         run: |
