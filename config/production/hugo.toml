@@ -1,2 +1,2 @@
 # Overrides for production environment
-baseurl = "https://thuliteio.github.io/doks-gh-pages/"
+baseurl = "/"
